@@ -15,6 +15,28 @@ Base synthetique shopper / retail analytics pour s'entrainer a l'exploration, au
 - `shopper_research_dictionary.csv` : dictionnaire des champs shopper ajoutes.
 - `shopper_research_method_note.md` : note de methode et garde-fous d'interpretation.
 
+## V2 shopper in-situ
+
+Une seconde base a ete construite localement pour se rapprocher d'une logique d'etude shopper in-situ en magasin : interviews shoppers, observations rayon, sessions terrain et contexte ventes.
+
+Fichiers legers pousses dans le repo :
+
+- `shopper_insitu_method_note.md`
+- `shopper_insitu_questionnaire_dictionary.csv`
+- `shopper_insitu_stores.csv`
+- `shopper_insitu_products.csv`
+
+Fichiers generes localement dans `outputs/` :
+
+- `generer_base_shopper_insitu_v2.py`
+- `inventaire_shopper_insitu_v2.html`
+- `shopper_insitu_fieldwork_sessions.csv`
+- `shopper_insitu_interviews.csv`
+- `shopper_insitu_shelf_observations.csv`
+- `shopper_insitu_retail_sales_context.csv`
+
+Les grosses tables d'interviews, d'observations et de contexte ventes n'ont pas ete poussees via le connecteur GitHub de cette session. Elles sont conservees localement et peuvent etre regenerees depuis le script local.
+
 ## Regenerer les fichiers enrichis
 
 Depuis le dossier du repo :
