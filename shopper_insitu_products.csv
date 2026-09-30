@@ -1,0 +1,25 @@
+product_id,category,subcategory,brand_tier,pack_format,avg_shelf_price_eur,promo_presence_rate,display_presence_rate,shopper_role
+PR001,Boissons soft,Cola,Private label,Family size,2.49,0.312,0.2,traffic_and_impulse
+PR002,Boissons soft,Eau aromatisee,Challenger brand,Multipack,2.43,0.252,0.173,traffic_and_impulse
+PR003,Boissons soft,Jus ambiant,Private label,On-the-go,2.18,0.282,0.194,traffic_and_impulse
+PR004,Boissons soft,The glace,Private label,Single,1.46,0.296,0.194,traffic_and_impulse
+PR005,Epicerie salee,Chips,National brand,Single,3.34,0.303,0.218,occasion_and_impulse
+PR006,Epicerie salee,Crackers,Private label,Family size,1.75,0.277,0.205,occasion_and_impulse
+PR007,Epicerie salee,Aperitif,Private label,Single,3.18,0.26,0.188,occasion_and_impulse
+PR008,Epicerie salee,Sauces,National brand,Family size,4.53,0.356,0.244,occasion_and_impulse
+PR009,Petit dejeuner,Cereales,National brand,On-the-go,3.52,0.242,0.04,routine_replenishment
+PR010,Petit dejeuner,Biscuits,Challenger brand,Multipack,2.89,0.245,0.064,routine_replenishment
+PR011,Petit dejeuner,Pate a tartiner,Private label,Multipack,6.07,0.268,0.048,routine_replenishment
+PR012,Petit dejeuner,Cafe soluble,National brand,Family size,4.45,0.236,0.04,routine_replenishment
+PR013,Hygiene,Shampooing,National brand,Family size,3.42,0.194,0.038,reassurance_and_routine
+PR014,Hygiene,Dentifrice,Challenger brand,Multipack,4.41,0.159,0.037,reassurance_and_routine
+PR015,Hygiene,Gel douche,National brand,Family size,3.98,0.178,0.043,reassurance_and_routine
+PR016,Hygiene,Deodorant,National brand,Single,3.83,0.147,0.029,reassurance_and_routine
+PR017,Entretien,Lessive,Private label,Multipack,6.34,0.306,0.131,stock_up_and_value
+PR018,Entretien,Nettoyant,National brand,Single,3.42,0.268,0.117,stock_up_and_value
+PR019,Entretien,Vaisselle,National brand,Family size,11.59,0.345,0.133,stock_up_and_value
+PR020,Entretien,Desodorisant,Private label,Family size,10.46,0.29,0.123,stock_up_and_value
+PR021,Frais libre-service,Yaourt,National brand,Single,4.47,0.205,0.159,meal_solution
+PR022,Frais libre-service,Dessert,National brand,On-the-go,5.61,0.208,0.154,meal_solution
+PR023,Frais libre-service,Fromage libre-service,National brand,Family size,1.94,0.2,0.147,meal_solution
+PR024,Frais libre-service,Snacking frais,Challenger brand,Single,3.38,0.192,0.141,meal_solution
