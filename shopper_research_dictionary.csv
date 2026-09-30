@@ -1,0 +1,26 @@
+table,field,type,definition,analysis_use
+shopper_retail_observations_enriched,shopper_mission_primary,synthetic derived,Mission d'achat dominante inferee pour la ligne retail.,Shopper behavior hypotheses and descriptive segmentation
+shopper_retail_observations_enriched,shopper_segment_primary,synthetic derived,Segment shopper dominant infere pour la ligne.,Shopper behavior hypotheses and descriptive segmentation
+shopper_retail_observations_enriched,shopper_need_state,synthetic derived,Besoin ou contexte shopper associe a la mission.,Shopper behavior hypotheses and descriptive segmentation
+shopper_retail_observations_enriched,purchase_planning_type,synthetic derived,Degre de planification suppose de l'achat.,Shopper behavior hypotheses and descriptive segmentation
+shopper_retail_observations_enriched,category_role_in_trip,synthetic derived,Role de la categorie dans le panier ou la visite.,Shopper behavior hypotheses and descriptive segmentation
+shopper_retail_observations_enriched,primary_decision_driver,synthetic derived,"Driver principal suppose: prix, disponibilite, routine, visibilite, praticite.",Shopper behavior hypotheses and descriptive segmentation
+shopper_retail_observations_enriched,decision_tree_entry,synthetic derived,Niveau d'entree synthetique dans l'arbre de decision shopper.,Shopper behavior hypotheses and descriptive segmentation
+shopper_retail_observations_enriched,perceived_value_band,synthetic derived,Lecture synthetique du prix percu relativement a la categorie et a la remise.,Shopper behavior hypotheses and descriptive segmentation
+shopper_retail_observations_enriched,price_position_vs_category,synthetic derived,Prix rayon relatif au prix moyen observe de la categorie.,Shopper behavior hypotheses and descriptive segmentation
+shopper_retail_observations_enriched,shopper_price_sensitivity_index,synthetic derived,Indice 0-100 de sensibilite au prix inferee.,Shopper behavior hypotheses and descriptive segmentation
+shopper_retail_observations_enriched,promo_affinity_index,synthetic derived,Indice 0-100 d'affinite promotionnelle inferee.,Shopper behavior hypotheses and descriptive segmentation
+shopper_retail_observations_enriched,brand_loyalty_proxy_index,synthetic derived,Indice proxy 0-100 de fidelite ou routine de choix.,Shopper behavior hypotheses and descriptive segmentation
+shopper_retail_observations_enriched,impulse_trigger_index,synthetic derived,Indice 0-100 de probabilite d'achat declenche par exposition ou occasion.,Shopper behavior hypotheses and descriptive segmentation
+shopper_retail_observations_enriched,convenience_need_index,synthetic derived,Indice 0-100 de besoin de praticite.,Shopper behavior hypotheses and descriptive segmentation
+shopper_retail_observations_enriched,substitution_behavior_if_oos,synthetic derived,Comportement probable si rupture observee.,Shopper behavior hypotheses and descriptive segmentation
+shopper_retail_observations_enriched,shopper_interpretation_scope,synthetic derived,Rappel que la motivation est inferee depuis un signal retail.,Shopper behavior hypotheses and descriptive segmentation
+shopper_trip_sample,trip_id,synthetic survey-like,Identifiant synthetique de visite shopper.,"Mission analysis, segmentation, basket behavior"
+shopper_trip_sample,shopping_mission,synthetic survey-like,Mission d'achat principale de la visite.,"Mission analysis, segmentation, basket behavior"
+shopper_trip_sample,shopper_segment,synthetic survey-like,Segment shopper du repondant synthetique.,"Mission analysis, segmentation, basket behavior"
+shopper_trip_sample,basket_categories,synthetic survey-like,Categories presentes dans le panier declare ou observe.,"Mission analysis, segmentation, basket behavior"
+shopper_trip_sample,list_used_flag,synthetic survey-like,Le shopper a utilise une liste ou un plan d'achat.,"Mission analysis, segmentation, basket behavior"
+shopper_trip_sample,promo_influenced_flag,synthetic survey-like,La visite ou l'achat a ete influence par une promo.,"Mission analysis, segmentation, basket behavior"
+shopper_trip_sample,impulse_item_added_flag,synthetic survey-like,Au moins un produit a ete ajoute non prevu.,"Mission analysis, segmentation, basket behavior"
+shopper_trip_sample,substitution_made_flag,synthetic survey-like,"Substitution realisee, souvent liee a une rupture ou indisponibilite.","Mission analysis, segmentation, basket behavior"
+shopper_trip_sample,satisfaction_score_1_10,synthetic survey-like,Satisfaction synthetique de sortie de visite.,"Mission analysis, segmentation, basket behavior"
