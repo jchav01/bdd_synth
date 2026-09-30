@@ -1,0 +1,7 @@
+shopper_segment,description,typical_missions,price_sensitivity,promo_affinity,brand_loyalty,planning_level
+Budget optimizers,"Cherchent a securiser le prix total du panier, comparent les remises et arbitrent facilement.",promo_hunt; stock_up,90,88,32,72
+Family stock-up,"Achats planifies, formats familiaux, categories de routine et paniers volumineux.",stock_up; planned_replenishment,67,62,54,86
+Convenience routine,"Visites frequentes, besoin rapide, faible tolerance a la rupture et decision pragmatique.",top_up; meal_solution,46,38,58,52
+Promo explorers,"Entrent volontiers dans la categorie via prospectus, display ou mecanique promotionnelle.",promo_hunt; treat_impulse,74,94,36,45
+Brand reassurance,"Preferent la securite de choix, les routines et les marques percues comme fiables.",planned_replenishment; top_up,39,34,84,71
+Impulse and inspiration,"Plus sensibles a l'exposition, au contexte de consommation et aux achats non prevus.",treat_impulse; meal_solution,52,57,42,31
