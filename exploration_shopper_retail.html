@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exploration shopper retail</title>
+  <style>
+    :root {
+      --ink: #1f2933;
+      --muted: #5b6673;
+      --bg: #f4f6f8;
+      --card: #ffffff;
+      --line: #cbd5df;
+      --bar: #2f6f73;
+      --dot: #c2410c;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+    header {
+      padding: 28px 34px 10px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 26px;
+    }
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+      gap: 18px;
+      padding: 18px 34px 34px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid #dde3ea;
+      border-radius: 8px;
+      padding: 18px;
+      box-shadow: 0 1px 2px rgba(20, 35, 50, 0.06);
+      overflow-x: auto;
+    }
+    .wide {
+      grid-column: 1 / -1;
+    }
+    h2 {
+      font-size: 17px;
+      margin: 0 0 14px;
+    }
+    h3 {
+      font-size: 14px;
+      margin: 18px 0 8px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 13px;
+    }
+    th, td {
+      border-bottom: 1px solid #e4e9ef;
+      padding: 8px 9px;
+      text-align: left;
+      white-space: nowrap;
+    }
+    th {
+      background: #eef3f7;
+      font-weight: 700;
+    }
+    svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .bar {
+      fill: var(--bar);
+    }
+    .line {
+      stroke: var(--bar);
+      stroke-width: 3;
+    }
+    .dot {
+      fill: var(--dot);
+    }
+    .axis {
+      stroke: var(--line);
+      stroke-width: 1;
+    }
+    .axis-label, .tick, .value-label {
+      fill: var(--muted);
+      font-size: 12px;
+    }
+    .value-label {
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Exploration standard de la base shopper retail</h1>
+    <p class="subtitle">Genere le 2026-09-30 14:26 a partir de shopper_retail_observations.csv.</p>
+  </header>
+  <main>
+    
+        <section class="card wide">
+          <h2>Quick overview</h2>
+          <table><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody><tr><td>Rows</td><td>14 976</td></tr>
+<tr><td>Columns</td><td>39</td></tr>
+<tr><td>Date range</td><td>2025-01-06 to 2025-12-29</td></tr>
+<tr><td>Stores</td><td>12</td></tr>
+<tr><td>Products</td><td>24</td></tr>
+<tr><td>Categories</td><td>6</td></tr>
+<tr><td>Total units</td><td>1 586 056</td></tr>
+<tr><td>Total net sales EUR</td><td>2 919 081.25</td></tr>
+<tr><td>Average units per row</td><td>105.91</td></tr>
+<tr><td>Rows with promotion</td><td>25.1%</td></tr>
+<tr><td>Rows with stockout</td><td>3.9%</td></tr></tbody></table>
+        </section>
+        
+
+    <section class="card">
+      <h2>Net sales by month</h2>
+      <svg viewBox="0 0 920 340" role="img">
+<line x1="58" y1="276" x2="898" y2="276" class="axis"></line>
+<line x1="58" y1="28" x2="58" y2="276" class="axis"></line>
+<polyline points="58.0,130.5 134.4,129.2 210.7,126.5 287.1,123.9 363.5,119.1 439.8,111.1 516.2,103.5 592.5,95.5 668.9,84.7 745.3,59.0 821.6,46.1 898.0,28.0" fill="none" class="line"></polyline>
+<circle cx="58.0" cy="130.5" r="4" class="dot"></circle>
+<circle cx="134.4" cy="129.2" r="4" class="dot"></circle>
+<circle cx="210.7" cy="126.5" r="4" class="dot"></circle>
+<circle cx="287.1" cy="123.9" r="4" class="dot"></circle>
+<circle cx="363.5" cy="119.1" r="4" class="dot"></circle>
+<circle cx="439.8" cy="111.1" r="4" class="dot"></circle>
+<circle cx="516.2" cy="103.5" r="4" class="dot"></circle>
+<circle cx="592.5" cy="95.5" r="4" class="dot"></circle>
+<circle cx="668.9" cy="84.7" r="4" class="dot"></circle>
+<circle cx="745.3" cy="59.0" r="4" class="dot"></circle>
+<circle cx="821.6" cy="46.1" r="4" class="dot"></circle>
+<circle cx="898.0" cy="28.0" r="4" class="dot"></circle>
+<text x="58.0" y="298" class="tick" text-anchor="middle">2025-08</text>
+<text x="134.4" y="298" class="tick" text-anchor="middle">2025-01</text>
+<text x="210.7" y="298" class="tick" text-anchor="middle">2025-11</text>
+<text x="287.1" y="298" class="tick" text-anchor="middle">2025-10</text>
+<text x="363.5" y="298" class="tick" text-anchor="middle">2025-02</text>
+<text x="439.8" y="298" class="tick" text-anchor="middle">2025-05</text>
+<text x="516.2" y="298" class="tick" text-anchor="middle">2025-07</text>
+<text x="592.5" y="298" class="tick" text-anchor="middle">2025-04</text>
+<text x="668.9" y="298" class="tick" text-anchor="middle">2025-03</text>
+<text x="745.3" y="298" class="tick" text-anchor="middle">2025-09</text>
+<text x="821.6" y="298" class="tick" text-anchor="middle">2025-06</text>
+<text x="898.0" y="298" class="tick" text-anchor="middle">2025-12</text>
+<text x="58" y="18" class="value-label">Max: 335 957 EUR</text>
+</svg>
+    </section>
+    
+
+    <section class="card">
+      <h2>Units sold by category</h2>
+      <svg viewBox="0 0 920 264" role="img">
+<text x="0" y="52" class="axis-label">Petit dejeuner</text>
+<rect x="210" y="34" width="590.0" height="26" rx="3" class="bar"></rect>
+<text x="808.0" y="52" class="value-label">572 247 units</text>
+<text x="0" y="88" class="axis-label">Epicerie salee</text>
+<rect x="210" y="70" width="565.3" height="26" rx="3" class="bar"></rect>
+<text x="783.3" y="88" class="value-label">548 313 units</text>
+<text x="0" y="124" class="axis-label">Boissons soft</text>
+<rect x="210" y="106" width="196.6" height="26" rx="3" class="bar"></rect>
+<text x="414.6" y="124" class="value-label">190 670 units</text>
+<text x="0" y="160" class="axis-label">Frais libre-service</text>
+<rect x="210" y="142" width="115.9" height="26" rx="3" class="bar"></rect>
+<text x="333.9" y="160" class="value-label">112 374 units</text>
+<text x="0" y="196" class="axis-label">Hygiene</text>
+<rect x="210" y="178" width="88.5" height="26" rx="3" class="bar"></rect>
+<text x="306.5" y="196" class="value-label">85 882 units</text>
+<text x="0" y="232" class="axis-label">Entretien</text>
+<rect x="210" y="214" width="78.9" height="26" rx="3" class="bar"></rect>
+<text x="296.9" y="232" class="value-label">76 570 units</text>
+</svg>
+    </section>
+    
+
+    <section class="card">
+      <h2>Net sales by category</h2>
+      <svg viewBox="0 0 920 264" role="img">
+<text x="0" y="52" class="axis-label">Entretien</text>
+<rect x="210" y="34" width="590.0" height="26" rx="3" class="bar"></rect>
+<text x="808.0" y="52" class="value-label">601 059 EUR</text>
+<text x="0" y="88" class="axis-label">Petit dejeuner</text>
+<rect x="210" y="70" width="576.9" height="26" rx="3" class="bar"></rect>
+<text x="794.9" y="88" class="value-label">587 666 EUR</text>
+<text x="0" y="124" class="axis-label">Epicerie salee</text>
+<rect x="210" y="106" width="573.7" height="26" rx="3" class="bar"></rect>
+<text x="791.7" y="124" class="value-label">584 500 EUR</text>
+<text x="0" y="160" class="axis-label">Frais libre-service</text>
+<rect x="210" y="142" width="422.8" height="26" rx="3" class="bar"></rect>
+<text x="640.8" y="160" class="value-label">430 772 EUR</text>
+<text x="0" y="196" class="axis-label">Boissons soft</text>
+<rect x="210" y="178" width="378.2" height="26" rx="3" class="bar"></rect>
+<text x="596.2" y="196" class="value-label">385 273 EUR</text>
+<text x="0" y="232" class="axis-label">Hygiene</text>
+<rect x="210" y="214" width="323.7" height="26" rx="3" class="bar"></rect>
+<text x="541.7" y="232" class="value-label">329 810 EUR</text>
+</svg>
+    </section>
+    
+
+    <section class="card">
+      <h2>Net sales by region</h2>
+      <svg viewBox="0 0 920 300" role="img">
+<text x="0" y="52" class="axis-label">Sud-Est</text>
+<rect x="210" y="34" width="590.0" height="26" rx="3" class="bar"></rect>
+<text x="808.0" y="52" class="value-label">862 526 EUR</text>
+<text x="0" y="88" class="axis-label">Sud-Ouest</text>
+<rect x="210" y="70" width="383.8" height="26" rx="3" class="bar"></rect>
+<text x="601.8" y="88" class="value-label">561 107 EUR</text>
+<text x="0" y="124" class="axis-label">Ouest</text>
+<rect x="210" y="106" width="375.2" height="26" rx="3" class="bar"></rect>
+<text x="593.2" y="124" class="value-label">548 477 EUR</text>
+<text x="0" y="160" class="axis-label">Nord-Ouest</text>
+<rect x="210" y="142" width="204.7" height="26" rx="3" class="bar"></rect>
+<text x="422.7" y="160" class="value-label">299 267 EUR</text>
+<text x="0" y="196" class="axis-label">Nord</text>
+<rect x="210" y="178" width="166.6" height="26" rx="3" class="bar"></rect>
+<text x="384.6" y="196" class="value-label">243 549 EUR</text>
+<text x="0" y="232" class="axis-label">Ile-de-France</text>
+<rect x="210" y="214" width="158.4" height="26" rx="3" class="bar"></rect>
+<text x="376.4" y="232" class="value-label">231 579 EUR</text>
+<text x="0" y="268" class="axis-label">Est</text>
+<rect x="210" y="250" width="118.0" height="26" rx="3" class="bar"></rect>
+<text x="336.0" y="268" class="value-label">172 578 EUR</text>
+</svg>
+    </section>
+    
+
+    <section class="card">
+      <h2>Net sales by store</h2>
+      <svg viewBox="0 0 920 480" role="img">
+<text x="0" y="52" class="axis-label">ST005</text>
+<rect x="210" y="34" width="590.0" height="26" rx="3" class="bar"></rect>
+<text x="808.0" y="52" class="value-label">340 482 EUR</text>
+<text x="0" y="88" class="axis-label">ST004</text>
+<rect x="210" y="70" width="521.2" height="26" rx="3" class="bar"></rect>
+<text x="739.2" y="88" class="value-label">300 778 EUR</text>
+<text x="0" y="124" class="axis-label">ST011</text>
+<rect x="210" y="106" width="518.6" height="26" rx="3" class="bar"></rect>
+<text x="736.6" y="124" class="value-label">299 267 EUR</text>
+<text x="0" y="160" class="axis-label">ST012</text>
+<rect x="210" y="142" width="460.6" height="26" rx="3" class="bar"></rect>
+<text x="678.6" y="160" class="value-label">265 814 EUR</text>
+<text x="0" y="196" class="axis-label">ST008</text>
+<rect x="210" y="178" width="429.2" height="26" rx="3" class="bar"></rect>
+<text x="647.2" y="196" class="value-label">247 699 EUR</text>
+<text x="0" y="232" class="axis-label">ST003</text>
+<rect x="210" y="214" width="422.0" height="26" rx="3" class="bar"></rect>
+<text x="640.0" y="232" class="value-label">243 549 EUR</text>
+<text x="0" y="268" class="axis-label">ST001</text>
+<rect x="210" y="250" width="401.3" height="26" rx="3" class="bar"></rect>
+<text x="619.3" y="268" class="value-label">231 579 EUR</text>
+<text x="0" y="304" class="axis-label">ST006</text>
+<rect x="210" y="286" width="382.3" height="26" rx="3" class="bar"></rect>
+<text x="600.3" y="304" class="value-label">220 625 EUR</text>
+<text x="0" y="340" class="axis-label">ST002</text>
+<rect x="210" y="322" width="378.0" height="26" rx="3" class="bar"></rect>
+<text x="596.0" y="340" class="value-label">218 141 EUR</text>
+<text x="0" y="376" class="axis-label">ST007</text>
+<rect x="210" y="358" width="354.4" height="26" rx="3" class="bar"></rect>
+<text x="572.4" y="376" class="value-label">204 503 EUR</text>
+<text x="0" y="412" class="axis-label">ST009</text>
+<rect x="210" y="394" width="301.6" height="26" rx="3" class="bar"></rect>
+<text x="519.6" y="412" class="value-label">174 067 EUR</text>
+<text x="0" y="448" class="axis-label">ST010</text>
+<rect x="210" y="430" width="299.0" height="26" rx="3" class="bar"></rect>
+<text x="517.0" y="448" class="value-label">172 578 EUR</text>
+</svg>
+    </section>
+    
+
+    <section class="card">
+      <h2>Top products by units sold</h2>
+      <svg viewBox="0 0 920 408" role="img">
+<text x="0" y="52" class="axis-label">PR010</text>
+<rect x="210" y="34" width="590.0" height="26" rx="3" class="bar"></rect>
+<text x="808.0" y="52" class="value-label">466 252 units</text>
+<text x="0" y="88" class="axis-label">PR006</text>
+<rect x="210" y="70" width="532.6" height="26" rx="3" class="bar"></rect>
+<text x="750.6" y="88" class="value-label">420 886 units</text>
+<text x="0" y="124" class="axis-label">PR003</text>
+<rect x="210" y="106" width="107.8" height="26" rx="3" class="bar"></rect>
+<text x="325.8" y="124" class="value-label">85 175 units</text>
+<text x="0" y="160" class="axis-label">PR008</text>
+<rect x="210" y="142" width="63.5" height="26" rx="3" class="bar"></rect>
+<text x="281.5" y="160" class="value-label">50 187 units</text>
+<text x="0" y="196" class="axis-label">PR012</text>
+<rect x="210" y="178" width="58.8" height="26" rx="3" class="bar"></rect>
+<text x="276.8" y="196" class="value-label">46 439 units</text>
+<text x="0" y="232" class="axis-label">PR009</text>
+<rect x="210" y="214" width="58.3" height="26" rx="3" class="bar"></rect>
+<text x="276.3" y="232" class="value-label">46 043 units</text>
+<text x="0" y="268" class="axis-label">PR002</text>
+<rect x="210" y="250" width="55.1" height="26" rx="3" class="bar"></rect>
+<text x="273.1" y="268" class="value-label">43 518 units</text>
+<text x="0" y="304" class="axis-label">PR024</text>
+<rect x="210" y="286" width="54.6" height="26" rx="3" class="bar"></rect>
+<text x="272.6" y="304" class="value-label">43 124 units</text>
+<text x="0" y="340" class="axis-label">PR005</text>
+<rect x="210" y="322" width="50.0" height="26" rx="3" class="bar"></rect>
+<text x="268.0" y="340" class="value-label">39 536 units</text>
+<text x="0" y="376" class="axis-label">PR007</text>
+<rect x="210" y="358" width="47.7" height="26" rx="3" class="bar"></rect>
+<text x="265.7" y="376" class="value-label">37 704 units</text>
+</svg>
+    </section>
+    
+
+    <section class="card">
+      <h2>Average units: promo vs no promo</h2>
+      <svg viewBox="0 0 920 120" role="img">
+<text x="0" y="52" class="axis-label">Promotion rows</text>
+<rect x="210" y="34" width="590.0" height="26" rx="3" class="bar"></rect>
+<text x="808.0" y="52" class="value-label">318 units / row</text>
+<text x="0" y="88" class="axis-label">Non-promotion rows</text>
+<rect x="210" y="70" width="64.8" height="26" rx="3" class="bar"></rect>
+<text x="282.8" y="88" class="value-label">34.9 units / row</text>
+</svg>
+    </section>
+    
+
+    <section class="card">
+      <h2>Average units by discount band</h2>
+      <svg viewBox="0 0 920 192" role="img">
+<text x="0" y="52" class="axis-label">No promo</text>
+<rect x="210" y="34" width="25.6" height="26" rx="3" class="bar"></rect>
+<text x="243.6" y="52" class="value-label">36.6 units / row</text>
+<text x="0" y="88" class="axis-label">0-10%</text>
+<rect x="210" y="70" width="45.6" height="26" rx="3" class="bar"></rect>
+<text x="263.6" y="88" class="value-label">65.1 units / row</text>
+<text x="0" y="124" class="axis-label">10-20%</text>
+<rect x="210" y="106" width="74.3" height="26" rx="3" class="bar"></rect>
+<text x="292.3" y="124" class="value-label">106 units / row</text>
+<text x="0" y="160" class="axis-label">20%+</text>
+<rect x="210" y="142" width="590.0" height="26" rx="3" class="bar"></rect>
+<text x="808.0" y="160" class="value-label">843 units / row</text>
+</svg>
+    </section>
+    
+
+    <section class="card">
+      <h2>Distribution of units sold</h2>
+      <svg viewBox="0 0 920 340" role="img">
+<line x1="58" y1="276" x2="902" y2="276" class="axis"></line>
+<line x1="58" y1="28" x2="58" y2="276" class="axis"></line>
+<rect x="67.6" y="28.0" width="41.0" height="248.0" rx="3" class="bar"></rect>
+<text x="88.1" y="298" class="tick" text-anchor="middle">-8</text>
+<rect x="127.9" y="276.0" width="41.0" height="0.0" rx="3" class="bar"></rect>
+<text x="148.4" y="298" class="tick" text-anchor="middle">29316</text>
+<rect x="188.2" y="276.0" width="41.0" height="0.0" rx="3" class="bar"></rect>
+<text x="208.7" y="298" class="tick" text-anchor="middle">58640</text>
+<rect x="248.5" y="276.0" width="41.0" height="0.0" rx="3" class="bar"></rect>
+<text x="269.0" y="298" class="tick" text-anchor="middle">87965</text>
+<rect x="308.8" y="276.0" width="41.0" height="0.0" rx="3" class="bar"></rect>
+<text x="329.3" y="298" class="tick" text-anchor="middle">117289</text>
+<rect x="369.1" y="276.0" width="41.0" height="0.0" rx="3" class="bar"></rect>
+<text x="389.6" y="298" class="tick" text-anchor="middle">146613</text>
+<rect x="429.4" y="276.0" width="41.0" height="0.0" rx="3" class="bar"></rect>
+<text x="449.9" y="298" class="tick" text-anchor="middle">175937</text>
+<rect x="489.6" y="276.0" width="41.0" height="0.0" rx="3" class="bar"></rect>
+<text x="510.1" y="298" class="tick" text-anchor="middle">205262</text>
+<rect x="549.9" y="276.0" width="41.0" height="0.0" rx="3" class="bar"></rect>
+<text x="570.4" y="298" class="tick" text-anchor="middle">234586</text>
+<rect x="610.2" y="276.0" width="41.0" height="0.0" rx="3" class="bar"></rect>
+<text x="630.7" y="298" class="tick" text-anchor="middle">263910</text>
+<rect x="670.5" y="276.0" width="41.0" height="0.0" rx="3" class="bar"></rect>
+<text x="691.0" y="298" class="tick" text-anchor="middle">293234</text>
+<rect x="730.8" y="276.0" width="41.0" height="0.0" rx="3" class="bar"></rect>
+<text x="751.3" y="298" class="tick" text-anchor="middle">322558</text>
+<rect x="791.1" y="276.0" width="41.0" height="0.0" rx="3" class="bar"></rect>
+<text x="811.6" y="298" class="tick" text-anchor="middle">351883</text>
+<rect x="851.4" y="276.0" width="41.0" height="0.0" rx="3" class="bar"></rect>
+<text x="871.9" y="298" class="tick" text-anchor="middle">381207</text>
+<text x="58" y="18" class="value-label">Max: 14 974 rows</text>
+</svg>
+    </section>
+    
+
+    <section class="card">
+      <h2>Top missing-value columns</h2>
+      <svg viewBox="0 0 920 480" role="img">
+<text x="0" y="52" class="axis-label">anomaly_type</text>
+<rect x="210" y="34" width="590.0" height="26" rx="3" class="bar"></rect>
+<text x="808.0" y="52" class="value-label">14 851 missing rows</text>
+<text x="0" y="88" class="axis-label">campaign_id</text>
+<rect x="210" y="70" width="520.1" height="26" rx="3" class="bar"></rect>
+<text x="738.1" y="88" class="value-label">13 092 missing rows</text>
+<text x="0" y="124" class="axis-label">missingness_pattern</text>
+<rect x="210" y="106" width="386.4" height="26" rx="3" class="bar"></rect>
+<text x="604.4" y="124" class="value-label">9 727 missing rows</text>
+<text x="0" y="160" class="axis-label">competitor_price_index</text>
+<rect x="210" y="142" width="94.4" height="26" rx="3" class="bar"></rect>
+<text x="312.4" y="160" class="value-label">2 375 missing rows</text>
+<text x="0" y="196" class="axis-label">shelf_share_pct</text>
+<rect x="210" y="178" width="88.5" height="26" rx="3" class="bar"></rect>
+<text x="306.5" y="196" class="value-label">2 228 missing rows</text>
+<text x="0" y="232" class="axis-label">inventory_on_hand_units</text>
+<rect x="210" y="214" width="50.1" height="26" rx="3" class="bar"></rect>
+<text x="268.1" y="232" class="value-label">1 260 missing rows</text>
+<text x="0" y="268" class="axis-label">regular_price_eur</text>
+<rect x="210" y="250" width="32.4" height="26" rx="3" class="bar"></rect>
+<text x="250.4" y="268" class="value-label">815 missing rows</text>
+<text x="0" y="304" class="axis-label">shelf_price_eur</text>
+<rect x="210" y="286" width="32.4" height="26" rx="3" class="bar"></rect>
+<text x="250.4" y="304" class="value-label">815 missing rows</text>
+<text x="0" y="340" class="axis-label">discount_pct</text>
+<rect x="210" y="322" width="32.4" height="26" rx="3" class="bar"></rect>
+<text x="250.4" y="340" class="value-label">815 missing rows</text>
+<text x="0" y="376" class="axis-label">store_traffic</text>
+<rect x="210" y="358" width="12.1" height="26" rx="3" class="bar"></rect>
+<text x="230.1" y="376" class="value-label">305 missing rows</text>
+<text x="0" y="412" class="axis-label">category_traffic_index</text>
+<rect x="210" y="394" width="12.1" height="26" rx="3" class="bar"></rect>
+<text x="230.1" y="412" class="value-label">305 missing rows</text>
+<text x="0" y="448" class="axis-label">basket_attachment_rate</text>
+<rect x="210" y="430" width="12.1" height="26" rx="3" class="bar"></rect>
+<text x="230.1" y="448" class="value-label">305 missing rows</text>
+</svg>
+    </section>
+    
+
+    <section class="card">
+      <h2>Data quality flags</h2>
+      <svg viewBox="0 0 920 192" role="img">
+<text x="0" y="52" class="axis-label">ok</text>
+<rect x="210" y="34" width="590.0" height="26" rx="3" class="bar"></rect>
+<text x="808.0" y="52" class="value-label">9 632 rows</text>
+<text x="0" y="88" class="axis-label">partial_missing</text>
+<rect x="210" y="70" width="319.7" height="26" rx="3" class="bar"></rect>
+<text x="537.7" y="88" class="value-label">5 219 rows</text>
+<text x="0" y="124" class="axis-label">suspected_anomaly</text>
+<rect x="210" y="106" width="5.8" height="26" rx="3" class="bar"></rect>
+<text x="223.8" y="124" class="value-label">95.0 rows</text>
+<text x="0" y="160" class="axis-label">partial_missing_and_suspected_anomaly</text>
+<rect x="210" y="142" width="2.0" height="26" rx="3" class="bar"></rect>
+<text x="220.0" y="160" class="value-label">30.0 rows</text>
+</svg>
+    </section>
+    
+
+    <section class="card">
+      <h2>Anomaly types</h2>
+      <svg viewBox="0 0 920 192" role="img">
+<text x="0" y="52" class="axis-label">stockout_during_promo</text>
+<rect x="210" y="34" width="590.0" height="26" rx="3" class="bar"></rect>
+<text x="808.0" y="52" class="value-label">106 rows</text>
+<text x="0" y="88" class="axis-label">returns_correction</text>
+<rect x="210" y="70" width="44.5" height="26" rx="3" class="bar"></rect>
+<text x="262.5" y="88" class="value-label">8.0 rows</text>
+<text x="0" y="124" class="axis-label">pos_duplication_suspected</text>
+<rect x="210" y="106" width="33.4" height="26" rx="3" class="bar"></rect>
+<text x="251.4" y="124" class="value-label">6.0 rows</text>
+<text x="0" y="160" class="axis-label">price_error_suspected</text>
+<rect x="210" y="142" width="27.8" height="26" rx="3" class="bar"></rect>
+<text x="245.8" y="160" class="value-label">5.0 rows</text>
+</svg>
+    </section>
+    
+
+        <section class="card wide">
+          <h2>Simple tables</h2>
+          <h3>Net sales by category</h3>
+          <table><thead><tr><th>Category</th><th>Net sales EUR</th></tr></thead><tbody><tr><td>Entretien</td><td>601 059</td></tr>
+<tr><td>Petit dejeuner</td><td>587 666</td></tr>
+<tr><td>Epicerie salee</td><td>584 500</td></tr>
+<tr><td>Frais libre-service</td><td>430 772</td></tr>
+<tr><td>Boissons soft</td><td>385 273</td></tr>
+<tr><td>Hygiene</td><td>329 810</td></tr></tbody></table>
+          <h3>Missing values</h3>
+          <table><thead><tr><th>Column</th><th>Missing rows</th><th>Share</th></tr></thead><tbody><tr><td>anomaly_type</td><td>14 851</td><td>99.2%</td></tr>
+<tr><td>campaign_id</td><td>13 092</td><td>87.4%</td></tr>
+<tr><td>missingness_pattern</td><td>9 727</td><td>65.0%</td></tr>
+<tr><td>competitor_price_index</td><td>2 375</td><td>15.9%</td></tr>
+<tr><td>shelf_share_pct</td><td>2 228</td><td>14.9%</td></tr>
+<tr><td>inventory_on_hand_units</td><td>1 260</td><td>8.4%</td></tr>
+<tr><td>regular_price_eur</td><td>815</td><td>5.4%</td></tr>
+<tr><td>shelf_price_eur</td><td>815</td><td>5.4%</td></tr>
+<tr><td>discount_pct</td><td>815</td><td>5.4%</td></tr>
+<tr><td>store_traffic</td><td>305</td><td>2.0%</td></tr>
+<tr><td>category_traffic_index</td><td>305</td><td>2.0%</td></tr>
+<tr><td>basket_attachment_rate</td><td>305</td><td>2.0%</td></tr></tbody></table>
+        </section>
+        
+  </main>
+</body>
+</html>
