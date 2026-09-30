@@ -1,0 +1,11 @@
+table,field,question_or_source,type,analysis_use
+shopper_insitu_interviews,shopping_mission,What was the main purpose of this shopping trip?,single choice,Mission segmentation
+shopper_insitu_interviews,planned_category_flag,Was this category planned before entering the store?,yes/no,Planned vs impulse behavior
+shopper_insitu_interviews,brand_preselected_flag,Did the shopper have a brand or product in mind?,yes/no,Decision tree and loyalty proxy
+shopper_insitu_interviews,promo_seen_flag,Did the shopper notice a promotion?,yes/no,Promo awareness and conversion
+shopper_insitu_interviews,display_seen_flag,Did the shopper notice a display or secondary placement?,yes/no,Merchandising visibility
+shopper_insitu_interviews,oos_encountered_flag,Did the shopper face an out-of-stock or unavailable item?,yes/no,Availability friction
+shopper_insitu_interviews,primary_choice_driver,What mainly drove the choice or non-choice?,single choice,Choice drivers
+shopper_insitu_interviews,non_purchase_reason,"If no purchase, why not?",single choice,Barriers and lost conversion
+shopper_insitu_shelf_observations,dwell_time_seconds,Observed time spent at shelf,observed measure,Engagement and friction
+shopper_insitu_shelf_observations,purchase_observed_flag,Observed product taken away from shelf,observed flag,Observed conversion
