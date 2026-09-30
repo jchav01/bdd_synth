@@ -1,0 +1,13 @@
+store_id,store_format,region,urbanity,catchment_profile,avg_weekly_store_traffic,interview_target_n,fieldwork_note
+ST001,Super,Ile-de-France,Urban,Commuters,29278,260,Good visibility from main aisle
+ST002,Super,Sud-Est,Small city,Mixed residential,26873,260,High traffic entrance
+ST003,Super,Nord,Urban,Mixed residential,24725,200,Standard access
+ST004,Hyper,Ouest,Small city,Commuters,44213,200,Limited space near category
+ST005,Hyper,Sud-Ouest,Urban,Price-sensitive households,47061,220,Good visibility from main aisle
+ST006,Super,Sud-Ouest,Suburban,Mixed residential,29345,220,Standard access
+ST007,Super,Sud-Est,Small city,Mixed residential,22085,200,Limited space near category
+ST008,Hyper,Ouest,Urban,Families,41834,240,Standard access
+ST009,Super,Sud-Est,Urban,Mixed residential,20874,240,Standard access
+ST010,Super,Est,Urban,Mixed residential,24699,240,Good visibility from main aisle
+ST011,Hyper,Nord-Ouest,Small city,Commuters,36685,200,Limited space near category
+ST012,Hyper,Sud-Est,Urban,Commuters,40092,260,High traffic entrance
